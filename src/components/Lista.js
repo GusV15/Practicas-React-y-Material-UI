@@ -1,0 +1,34 @@
+import React from 'react';
+import {
+    List,
+    ListItem,
+    ListItemIcon,
+    ListItemText,
+    Divider
+} from '@material-ui/core';
+import CloudQueueIcon from '@material-ui/icons/CloudQueue';
+import DeckIcon from '@material-ui/icons/Deck';
+
+function Lista() {
+    return (
+        <List component="nav">
+            <ListItem button>
+                <ListItemIcon>
+                    <CloudQueueIcon />
+                </ListItemIcon>             
+                <ListItemText primary="Mi primer elemento" />
+            </ListItem>
+
+            <ListItem button>
+                <ListItemIcon>
+                    <DeckIcon />
+                </ListItemIcon>             
+                <ListItemText primary="Mi segundo element" />
+            </ListItem>
+
+            <Divider />
+        </List>
+    )
+};
+
+export default Lista;

@@ -1,24 +1,65 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { ThemeProvider } from '@material-ui/core/styles';
+import theme from './temaConfig';
+import Contenedor from './components/Contenedor';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {/* Button
+      
+          color -> color de texto
+          variant -> color de fondo
+          disableElevation -> elimina sombra
+          href -> agrega enlace
+          fullWidth -> toma el 100% del ancho
+          size -> tamaño de boton    
+      */}
+      {/*
+      <Button color="secondary">
+        Hola
+      </Button>
+      <Button variant="contained" color="primary">
+        contained
+      </Button>
+      <Button 
+        variant="contained" 
+        color="primary"
+        disableElevation
+      >
+        disableElevation
+      </Button>
+      <Button 
+        variant="contained" 
+        color="primary"
+        href="http://google.com"
+      >
+        outlined
+      </Button>
+      <Button 
+        variant="contained" 
+        color="primary"
+        fullWidth
+      >
+        fullWidth
+      </Button>
+      <Button 
+        variant="contained" 
+        color="primary"
+        size="large"
+      >
+        size
+      </Button>
+
+      <Iconos />
+
+      <Tipografia />
+
+      <EstilosPersonalizados />
+      */}
+      <ThemeProvider theme={theme}>
+        <Contenedor />
+      </ThemeProvider>
     </div>
   );
 }
